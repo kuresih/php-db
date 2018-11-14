@@ -1,0 +1,15 @@
+//php diletakkan di atas script<html>
+<?php
+session_start();
+include "koneksi.php";
+
+  if(!isset($_SESSION['username'])){
+    header("location:login.php");
+    exit();
+  }else{
+    $username = $_SESSION['username'];
+  }
+?>
+
+//link logout
+<p><a href="logout.php">logout</a></p>
